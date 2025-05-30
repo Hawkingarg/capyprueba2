@@ -1,0 +1,100 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+#startScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* VIDEO DE FONDO */
+#backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+/* LOGO */
+#startScreen img {
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+
+/* BOTÓN PLAY */
+#playButton {
+  padding: 15px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00ffff, #0066ff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0 10px #00ffff;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#playButton:hover {
+  background-color: #004aad;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #0066ff;
+}
+
+/* TABLA RANKING */
+#rankingTable {
+  width: 320px;
+  max-width: 90vw;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+#rankingTable th, #rankingTable td {
+  border: 1px solid #00ffff;
+  padding: 8px 12px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+#rankingTable th {
+  background: linear-gradient(45deg, #00ffff, #0066ff);
+  font-weight: bold;
+  color: white;
+}
+
+#rankingTable tbody tr:hover {
+  background: rgba(0, 255, 255, 0.15);
+  cursor: default;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

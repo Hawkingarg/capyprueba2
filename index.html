@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capy Jump to the Moon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="startScreen">
+    <video id="backgroundVideo" autoplay loop playsinline muted>
+      <source src="videos/fondo.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+    <img src="logo.png" alt="Logo del juego" />
+    <button id="playButton">Play</button>
+
+    <!-- Aquí se muestra la tabla ranking antes de iniciar -->
+    <table id="rankingTable">
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Jugador</th>
+          <th>Tiempo</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas generadas por JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="juego.js"></script>
+</body>
+</html>
